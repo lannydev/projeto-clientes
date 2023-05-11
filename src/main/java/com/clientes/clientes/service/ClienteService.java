@@ -1,7 +1,6 @@
 package com.clientes.clientes.service;
 
-import com.clientes.clientes.entities.Cliente;
-import com.clientes.clientes.repositories.Clienterepository;
+import com.clientes.clientes.repositories.ClienteRepository;
 import dto.ClienteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 @Service
 public class ClienteService {
     @Autowired
-    private Clienterepository clienterepository;
+    private ClienteRepository clienterepository;
 
     public List<ClienteDto> findAll(){
       final var lista = clienterepository.findAll();
